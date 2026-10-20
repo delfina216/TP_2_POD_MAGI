@@ -1,0 +1,25 @@
+# Entornos virtuales
+venv/
+.venv/
+env/
+
+# Cachés de Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Archivo oficial completo (es grande: se descarga, no se versiona)
+data/precios-en-surtidor*.csv
+data/completo*.csv
+
+# Salidas generadas al ejecutar (se regeneran con el comando del README)
+outputs/
+
+# Sistema operativo / editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Secretos (no debería haber ninguno, pero por las dudas)
+.env

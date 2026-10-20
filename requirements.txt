@@ -1,0 +1,3 @@
+# Este proyecto usa solo la biblioteca estándar de Python (3.10 o superior):
+# csv, json, re, datetime, unicodedata, argparse, abc, statistics, unittest.
+# No hace falta instalar nada con pip.
