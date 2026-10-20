@@ -1,7 +1,9 @@
 # Buscador de precios vigentes de combustibles
 
 **Autora:** Delfina Magi
+
 **Materia:** Programación Orientada a Datos — Licenciatura en Ciencia de Datos, UCA, 2026
+
 **Trabajo:** TP2
 
 
