@@ -93,7 +93,8 @@ La muestra se genera con `scripts/preparar_muestra.py`, que conserva los último
 * Que una estación no aparezca **no significa que no exista**: puede no haber informado precios para ese combustible.
 * **GNC se expresa por m³ y los líquidos por litro.** La aplicación nunca mezcla combustibles en una misma consulta.
 * La Resolución 314/2016 fue abrogada por la Resolución 717/2025 del Ministerio de Economía (B.O. 02/06/2025). Desde mediados de 2025 la cantidad de actualizaciones cae mucho: en Rosario se pasa de unas 900 filas por mes a principios de 2025 a menos de 200 por mes en 2026. Por eso, las consultas de 2026 devuelven menos estaciones que las de años anteriores.
-* Los datos descargados llegan hasta el **14/10/2026** para Rosario (el recurso se actualizó por última vez el 17/10/2026).
+* Los datos descargados (20/10/2026) llegan hasta el **14/10/2026** para Rosario.
+* El portal describe el recurso histórico como "precios anteriores": el precio que una estación tiene cargado en este momento se publica en el recurso de precios vigentes. Por eso, en una consulta a una fecha muy cercana a la descarga, una estación puede aparecer con su precio anterior o no aparecer. Para fechas pasadas no hay diferencia.
 * El archivo nacional tiene fechas mal cargadas (por ejemplo, años 0001 o 9920) y algunos precios en cero. La aplicación los rechaza y los registra (ver sección 5).
 * Los nombres de localidad y de producto se escriben de forma no uniforme en el original y se normalizan antes de comparar.
 
@@ -260,3 +261,13 @@ leer (fuentes.py) → normalizar campos → validar esquema → limpiar, con reg
 * **Entradas inválidas y casos límite:** localidad sin resultados, fecha mal escrita o inexistente, horario inválido, antigüedad máxima inválida, archivo inexistente, formato no soportado, JSON mal estructurado y columnas faltantes.
 * **Propiedades del resultado:** CSV y JSON dan el mismo resultado, ninguna fila se pierde (leídas = válidas + rechazadas), ningún precio es posterior a la consulta ni más viejo que el límite, y hay una sola fila por estación.
 * **Muestra real:** con `data/muestra.csv` y `data/muestra.json`, todas las filas son válidas y las dos versiones dan el mismo ranking. Así se comprueba que la aplicación lee el formato del archivo oficial y no solo el de los datos inventados.
+
+---
+
+## 7. Versión entregada
+
+La versión evaluada es la que tiene la etiqueta **`v1.0`** en el repositorio:
+
+```bash
+git checkout v1.0
+```
